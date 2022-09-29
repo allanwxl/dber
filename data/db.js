@@ -2,14 +2,22 @@
 import Dexie from 'dexie';
 import { Notification } from '@arco-design/web-react';
 import { diffJson } from 'diff';
+import dexieCloud from "dexie-cloud-addon";
 
-export const db = new Dexie('graphDB');
+// const dexieCloud = require("dexie-cloud-addon")
+
+export const db = new Dexie('graphDB', {addons: [dexieCloud]});
 
 db.version(3).stores({
     graphs: 'id',
     meta: '++id, inited',
     logs: '++id, graphId',
 });
+
+db.cloud.configure({
+    databaseUrl: "https://zjnesf405.dexie.cloud",
+    requireAuth: false
+})
 
 export const saveGraph = async ({
     id,

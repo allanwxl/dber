@@ -1,34 +1,48 @@
 {
-    "name": "dber",
-    "version": "0.8.0",
-    "private": true,
-    "scripts": {
-        "dev": "next dev",
-        "build": "next build",
-        "start": "next start",
-        "gen": "next build && next export",
-        "lint": "next lint"
-    },
-    "dependencies": {
-        "@arco-design/web-react": "^2.31.3",
-        "@dbml/core": "^2.4.0",
-        "@monaco-editor/react": "^4.4.5",
-        "classnames": "^2.3.1",
-        "dexie": "^3.2.2",
-        "diff": "^5.1.0",
-        "install": "^0.13.0",
-        "nanoid": "^4.0.0",
-        "next": "12.2.2",
-        "npm": "^8.7.0",
-        "react": "18.2.0",
-        "react-contexify": "^5.0.0",
-        "react-dom": "18.2.0",
-        "react-hotkeys-hook": "^3.4.7",
-        "sass": "^1.50.0"
-    },
-    "devDependencies": {
-        "eslint": "8.20.0",
-        "eslint-config-next": "12.2.2",
-        "next-plugin-svgr": "^1.1.1"
-    }
+  "name": "dber",
+  "version": "0.8.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "gen": "next build && next export",
+    "lint": "next lint"
+  },
+  "dependencies": {
+    "@arco-design/web-react": "^2.31.3",
+    "@dbml/core": "^2.4.0",
+    "@monaco-editor/react": "^4.4.5",
+    "classnames": "^2.3.1",
+    "dexie": "^4.0.0-alpha.3",
+    "dexie-cloud-addon": "^4.0.0-beta.22",
+    "diff": "^5.1.0",
+    "install": "^0.13.0",
+    "nanoid": "^4.0.0",
+    "next": "12.2.2",
+    "npm": "^8.7.0",
+    "react": "18.2.0",
+    "react-contexify": "^5.0.0",
+    "react-dom": "18.2.0",
+    "react-hotkeys-hook": "^3.4.7",
+    "sass": "^1.50.0"
+  },
+  "devDependencies": {
+    "eslint": "8.20.0",
+    "eslint-config-next": "12.2.2",
+    "next-plugin-svgr": "^1.1.1"
+  },
+  "description": "[中文](README-CN.md)",
+  "main": "next.config.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/allanwxl/dber.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/allanwxl/dber/issues"
+  },
+  "homepage": "https://github.com/allanwxl/dber#readme"
 }
