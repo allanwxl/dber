@@ -71,6 +71,7 @@ export default function Home() {
             }
 
             if (!inited) {
+                console.log(db);
                 await db.meta.add({ inited: true });
                 await Promise.all(
                     [northwindTraders, blog, spaceX].map(item =>
