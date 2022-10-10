@@ -23,14 +23,15 @@ export const db = new Dexie('graphDB', {addons: [relationships, dexieCloud]});
 // console.log(db);
 // &代表id是独一无二的 和sql的unique类似，*代表tags可以是数组 支持多项索引 作者：西芹术士 https://www.bilibili.com/read/cv15712691/ 出处：bilibili
 db.version(3).stores({
-  graphs: '@id',
-  meta: '@id, inited',
+  graphs: 'id',
+  meta: 'id, inited',
   logs: 'graphId',
 });
 
 // https://dexie.org/cloud/docs/db.cloud.configure()
 db.cloud.configure({
-  databaseUrl: "https://zjnesf405.dexie.cloud",
+  // databaseUrl: "https://zjnesf405.dexie.cloud", // 少锋
+  databaseUrl: "https://zcd5vm8q3.dexie.cloud", // 选旅
   requireAuth: false,
   unsyncedTables: ['openCloseStates']
   // tryUseServiceWorker: true, // true!
